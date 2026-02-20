@@ -19,7 +19,7 @@ export function ProjectGallery() {
   const [lightbox, setLightbox] = useState<number | null>(null)
 
   return (
-    <section id="proyecto" className="bg-background py-20 lg:py-28 overflow-hidden">
+    <section id="proyecto" className="bg-background pt-20 pb-10 lg:pt-28 lg:pb-14 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4">
         {/* ── Header ─────────────────────────────────────────────── */}
         <div className="mb-14 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
@@ -38,7 +38,7 @@ export function ProjectGallery() {
         </div>
 
         {/* ── Bento Gallery ──────────────────────────────────────── */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
           {/* Hero image — large */}
           <button
             onClick={() => setLightbox(0)}
