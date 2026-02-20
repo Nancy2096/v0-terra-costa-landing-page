@@ -51,36 +51,53 @@ export function Amenities() {
           </p>
         </div>
 
-        {/* ── Featured bento grid ──────────────────────────────── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5 mb-8">
-          {featured.map((item, i) => (
-            <div
-              key={item.name}
-              className={`group relative overflow-hidden rounded-2xl ${
-                i === 0 ? "md:row-span-2 aspect-[3/4] md:aspect-auto" : "aspect-[16/9]"
-              }`}
-            >
-              <Image
-                src={item.image}
-                alt={item.name}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes={i === 0 ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, 50vw"}
-                quality={80}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-earth/80 via-earth/20 to-transparent" />
+        {/* ── Masonry-style grid ─────────────────────────────── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5 mb-8">
+          {featured.map((item, i) => {
+            /* Pool: wide top-left | Gym: narrow top-right | Yoga: narrow bottom-left | BBQ: wide bottom-right */
+            const span =
+              i === 0
+                ? "lg:col-span-7 aspect-[4/3] lg:aspect-[16/10]"
+                : i === 1
+                  ? "lg:col-span-5 aspect-[4/3] lg:aspect-[16/10]"
+                  : i === 2
+                    ? "lg:col-span-5 aspect-[4/3] lg:aspect-[16/10]"
+                    : "lg:col-span-7 aspect-[4/3] lg:aspect-[16/10]"
 
-              {/* Content overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
-                <h3 className="font-serif text-xl lg:text-2xl text-cream mb-1">
-                  {item.name}
-                </h3>
-                <p className="text-cream/70 text-sm leading-relaxed max-w-xs">
-                  {item.description}
-                </p>
+            return (
+              <div
+                key={item.name}
+                className={`group relative overflow-hidden rounded-2xl ${span}`}
+              >
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 60vw"
+                  quality={80}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-earth/70 via-earth/10 to-transparent" />
+
+                {/* Label chip */}
+                <div className="absolute top-4 left-4 rounded-full bg-cream/15 backdrop-blur-sm px-3 py-1">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-gold">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+
+                {/* Content overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-5 lg:p-7">
+                  <h3 className="font-serif text-lg lg:text-2xl text-cream mb-1">
+                    {item.name}
+                  </h3>
+                  <p className="text-cream/60 text-sm leading-relaxed max-w-xs hidden sm:block">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         {/* ── Extra amenities strip ────────────────────────────── */}
