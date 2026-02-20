@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, TrendingUp } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 const stats = [
   { value: "25%", label: "Por debajo del mercado", sub: "Precio de preventa" },
@@ -30,7 +30,7 @@ export function Urgency() {
         </div>
 
         {/* ── Stats row ─────────────────────────────────────────── */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
           {stats.map((s) => (
             <div
               key={s.label}
@@ -43,44 +43,6 @@ export function Urgency() {
               <span className="text-cream/40 text-xs">{s.sub}</span>
             </div>
           ))}
-        </div>
-
-        {/* ── Timeline comparison ───────────────────────────────── */}
-        <div className="mx-auto max-w-3xl rounded-2xl border border-cream/10 bg-cream/5 p-6 lg:p-8">
-          <div className="flex items-center gap-2 mb-6">
-            <TrendingUp className="h-4 w-4 text-gold" strokeWidth={1.5} />
-            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-gold">
-              Caso de exito
-            </span>
-          </div>
-
-          {/* Progress bar visual */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-0">
-            {/* Start */}
-            <div className="flex flex-col items-center sm:items-start gap-1 sm:w-1/4">
-              <span className="font-serif text-xl text-cream">$245K</span>
-              <span className="text-cream/40 text-xs">Preventa</span>
-            </div>
-
-            {/* Bar */}
-            <div className="hidden sm:flex flex-1 items-center px-4">
-              <div className="relative h-2 w-full rounded-full bg-cream/10">
-                <div className="absolute inset-y-0 left-0 w-[65%] rounded-full bg-gold/60" />
-                <div className="absolute inset-y-0 left-0 w-full rounded-full bg-gold/20" />
-              </div>
-            </div>
-
-            {/* End */}
-            <div className="flex flex-col items-center sm:items-end gap-1 sm:w-1/4">
-              <span className="font-serif text-xl text-cream">$375K</span>
-              <span className="text-cream/40 text-xs">Precio final</span>
-            </div>
-          </div>
-
-          <p className="text-cream/50 text-sm leading-relaxed mt-5 text-center">
-            Vista Zafiros se vendio 100% en preventa con un incremento de +53%.
-            Terra Costa es esa misma oportunidad hoy.
-          </p>
         </div>
 
         {/* ── Units indicator + CTA ─────────────────────────────── */}
