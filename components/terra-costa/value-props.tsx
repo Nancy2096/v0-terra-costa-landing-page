@@ -30,55 +30,47 @@ const props = [
 
 export function ValueProps() {
   return (
-    <section className="bg-cream py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-4">
+    <section className="bg-cream py-16 lg:py-20">
+      <div className="mx-auto max-w-6xl px-4">
         <p className="text-center text-sm font-medium uppercase tracking-[0.2em] text-gold mb-3">
           Por qué Terra Costa
         </p>
-        <h2 className="text-center font-serif text-3xl lg:text-4xl text-earth mb-16 text-balance">
+        <h2 className="text-center font-serif text-3xl lg:text-4xl text-earth mb-12 text-balance">
           Una inversión con vista al mar
         </h2>
 
-        <div className="flex flex-col gap-20 lg:gap-28">
-          {props.map((prop, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
+          {props.map((prop) => (
             <div
               key={prop.title}
-              className={`flex flex-col gap-8 lg:gap-16 lg:items-center ${
-                i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-              }`}
+              className="group relative overflow-hidden rounded-xl bg-card"
             >
               {/* Image */}
-              <div className="relative lg:w-3/5 aspect-[4/3] lg:aspect-[3/2] overflow-hidden rounded-xl">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={prop.image}
                   alt={prop.title}
                   fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-earth/10" />
-              </div>
-
-              {/* Content */}
-              <div className="lg:w-2/5 flex flex-col gap-5">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10">
-                    <prop.icon
-                      className="h-5 w-5 text-accent"
-                      strokeWidth={1.5}
-                    />
-                  </div>
-                  <span className="text-xs font-semibold uppercase tracking-[0.15em] text-gold">
+                <div className="absolute inset-0 bg-earth/20" />
+                <div className="absolute top-4 left-4 flex items-center gap-2 rounded-full bg-card/90 px-3 py-1.5 backdrop-blur-sm">
+                  <prop.icon className="h-4 w-4 text-accent" strokeWidth={1.5} />
+                  <span className="text-xs font-semibold uppercase tracking-wider text-earth">
                     {prop.label}
                   </span>
                 </div>
-                <h3 className="font-serif text-2xl lg:text-3xl text-earth leading-tight text-balance">
+              </div>
+
+              {/* Content */}
+              <div className="flex flex-col gap-2 p-5">
+                <h3 className="font-serif text-xl text-earth leading-snug text-balance">
                   {prop.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {prop.description}
                 </p>
-                <div className="h-px w-16 bg-gold/40 mt-2" />
               </div>
             </div>
           ))}
