@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { useState } from "react"
-import { Bed, Bath, Sparkles, ArrowRight, X } from "lucide-react"
+import { X } from "lucide-react"
 
 /* ── Gallery images ──────────────────────────────────────────────── */
 const gallery = [
@@ -13,36 +13,7 @@ const gallery = [
   { src: "/images/rooftop-pool.jpg", label: "Rooftop", alt: "Alberca rooftop" },
 ]
 
-/* ── Unit models ─────────────────────────────────────────────────── */
-const models = [
-  {
-    name: "2 Recámaras",
-    tag: "Desde",
-    size: "95",
-    beds: 2,
-    baths: 2,
-    highlight: "Terraza con vista al mar",
-    featured: false,
-  },
-  {
-    name: "3 Recámaras",
-    tag: "Popular",
-    size: "130",
-    beds: 3,
-    baths: 2.5,
-    highlight: "Sala de TV + Terraza amplia",
-    featured: true,
-  },
-  {
-    name: "Penthouse",
-    tag: "Exclusivo",
-    size: "191",
-    beds: 3,
-    baths: 3,
-    highlight: "Rooftop privado + Doble altura",
-    featured: false,
-  },
-]
+
 
 export function ProjectGallery() {
   const [lightbox, setLightbox] = useState<number | null>(null)
@@ -153,103 +124,7 @@ export function ProjectGallery() {
           </div>
         )}
 
-        {/* ── Unit Cards ─────────────────────────────────────────── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
-          {models.map((m) => (
-            <div
-              key={m.name}
-              className={`group relative flex flex-col rounded-2xl p-6 lg:p-8 transition-all duration-300 hover:-translate-y-1 ${
-                m.featured
-                  ? "bg-earth text-primary-foreground shadow-xl"
-                  : "bg-card border border-border hover:shadow-lg"
-              }`}
-            >
-              {/* Tag */}
-              <span
-                className={`self-start text-[10px] font-bold uppercase tracking-[0.2em] rounded-full px-3 py-1 mb-5 ${
-                  m.featured
-                    ? "bg-primary-foreground/15 text-gold"
-                    : "bg-accent/10 text-accent"
-                }`}
-              >
-                {m.tag}
-              </span>
 
-              {/* Name + Area */}
-              <h3
-                className={`font-serif text-2xl ${
-                  m.featured ? "text-primary-foreground" : "text-earth"
-                }`}
-              >
-                {m.name}
-              </h3>
-              <div className="flex items-baseline gap-1 mt-2 mb-6">
-                <span
-                  className={`text-4xl font-serif ${
-                    m.featured ? "text-gold" : "text-accent"
-                  }`}
-                >
-                  {m.size}
-                </span>
-                <span
-                  className={`text-sm ${
-                    m.featured ? "text-primary-foreground/60" : "text-muted-foreground"
-                  }`}
-                >
-                  m&sup2;
-                </span>
-              </div>
-
-              {/* Specs */}
-              <div
-                className={`flex flex-col gap-3 py-5 border-t text-sm ${
-                  m.featured ? "border-primary-foreground/15" : "border-border"
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <Bed
-                    className={`h-4 w-4 shrink-0 ${
-                      m.featured ? "text-primary-foreground/50" : "text-muted-foreground"
-                    }`}
-                    strokeWidth={1.5}
-                  />
-                  <span>{m.beds} Recámaras</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Bath
-                    className={`h-4 w-4 shrink-0 ${
-                      m.featured ? "text-primary-foreground/50" : "text-muted-foreground"
-                    }`}
-                    strokeWidth={1.5}
-                  />
-                  <span>{m.baths} Baños</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Sparkles
-                    className={`h-4 w-4 shrink-0 ${
-                      m.featured ? "text-primary-foreground/50" : "text-muted-foreground"
-                    }`}
-                    strokeWidth={1.5}
-                  />
-                  <span>{m.highlight}</span>
-                </div>
-              </div>
-
-              {/* CTA */}
-              <a
-                href="#contacto"
-                className={`mt-auto flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-xs font-semibold tracking-wider uppercase transition-colors ${
-                  m.featured
-                    ? "bg-gold text-earth hover:bg-gold/90"
-                    : "border border-earth text-earth hover:bg-earth hover:text-primary-foreground"
-                }`}
-              >
-                Conocer precios
-                <ArrowRight className="h-3.5 w-3.5" />
-              </a>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   )
