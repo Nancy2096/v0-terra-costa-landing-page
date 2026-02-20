@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Phone, MessageCircle, CheckCircle } from "lucide-react"
 
 const interests = [
@@ -83,8 +84,27 @@ export function LeadForm() {
               de precios, planos y opciones de financiamiento personalizadas.
             </p>
 
+            {/* Advisor */}
+            <div className="mt-10 flex items-center gap-4">
+              <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-gold/40">
+                <Image
+                  src="/images/asesor.jpg"
+                  alt="Carlos Mendoza, asesor inmobiliario"
+                  fill
+                  className="object-cover"
+                  sizes="56px"
+                />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-earth">Carlos Mendoza</p>
+                <p className="text-xs text-muted-foreground">
+                  Asesor Inmobiliario — Terra Costa
+                </p>
+              </div>
+            </div>
+
             {/* Contact Options */}
-            <div className="mt-10 flex flex-col gap-4">
+            <div className="mt-5 flex flex-col gap-4">
               <a
                 href="https://wa.me/529629800511"
                 target="_blank"
