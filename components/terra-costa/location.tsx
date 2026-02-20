@@ -1,4 +1,4 @@
-import { MapPin, Plane, Ship } from "lucide-react"
+import { MapPin, Plane, Ship, Navigation } from "lucide-react"
 
 const distances = [
   {
@@ -67,6 +67,43 @@ export function Location() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* How to get there */}
+            <div className="mt-8 pt-8 border-t border-border">
+              <div className="flex items-center gap-2 mb-4">
+                <Navigation className="h-4 w-4 text-accent" strokeWidth={1.5} />
+                <span className="text-sm font-medium text-earth">
+                  Como llegar?
+                </span>
+              </div>
+              <div className="flex gap-3">
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=27.97,-111.07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm text-earth transition-colors hover:bg-secondary"
+                >
+                  <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2C7.59 2 4 5.59 4 10c0 5.57 7.15 11.43 7.45 11.7a.75.75 0 001.1 0C12.85 21.43 20 15.57 20 10c0-4.41-3.59-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z" fill="#4285F4"/>
+                  </svg>
+                  Google Maps
+                </a>
+                <a
+                  href="https://waze.com/ul?ll=27.97,-111.07&navigate=yes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm text-earth transition-colors hover:bg-secondary"
+                >
+                  <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2C6.48 2 2 6.25 2 11.38c0 2.86 1.36 5.42 3.48 7.12-.08 1.5-.82 2.76-.84 2.79a.5.5 0 00.43.71c2.1-.04 3.86-.92 4.86-1.6.65.13 1.35.22 2.07.22 5.52 0 10-4.25 10-9.24C22 6.25 17.52 2 12 2z" fill="#33CCFF"/>
+                    <circle cx="8.5" cy="11" r="1.25" fill="#333"/>
+                    <circle cx="15.5" cy="11" r="1.25" fill="#333"/>
+                    <path d="M9 14.5s1.5 2 3 2 3-2 3-2" stroke="#333" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
+                  </svg>
+                  Waze
+                </a>
+              </div>
             </div>
           </div>
         </div>
