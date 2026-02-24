@@ -33,13 +33,13 @@ export function Navbar() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         {/* Logo */}
-        <a href="#" className="relative h-10 w-28">
+        <a href="#" className="relative h-14 w-40">
           <Image
             src="/images/logo-light.png"
             alt="Terra Costa Condominios"
             fill
             className="object-contain"
-            sizes="112px"
+            sizes="160px"
             priority
           />
         </a>

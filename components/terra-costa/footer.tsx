@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <div className="relative h-16 w-36">
+            <div className="relative h-24 w-48">
               <Image
                 src="/images/logo-light.png"
                 alt="Terra Costa Condominios"
