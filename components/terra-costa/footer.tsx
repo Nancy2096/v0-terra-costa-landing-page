@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Instagram, Facebook, Youtube } from "lucide-react"
 
 export function Footer() {
@@ -7,16 +8,17 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <div>
-              <span className="font-serif text-xl text-cream tracking-wider">
-                Terra Costa
-              </span>
-              <span className="block text-gold/80 text-xs tracking-[0.3em] uppercase mt-1">
-                Upscale Coastal Residences
-              </span>
+            <div className="relative h-16 w-36">
+              <Image
+                src="/images/logo-light.png"
+                alt="Terra Costa Condominios"
+                fill
+                className="object-contain object-left"
+                sizes="144px"
+              />
             </div>
             <p className="text-cream/50 text-sm leading-relaxed">
-              Desert Development | San Carlos, Sonora, México
+              Desert Development | San Carlos, Sonora, Mexico
             </p>
           </div>
 
