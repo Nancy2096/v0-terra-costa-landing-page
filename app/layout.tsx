@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { DM_Sans, Playfair_Display } from 'next/font/google'
+import { DM_Sans, Alike } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -9,9 +9,10 @@ const dmSans = DM_Sans({
   display: 'swap',
 })
 
-const playfair = Playfair_Display({
+const alike = Alike({
+  weight: '400',
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-alike',
   display: 'swap',
 })
 
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#4A3728',
+  themeColor: '#5C3D2E',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -51,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${dmSans.variable} ${playfair.variable}`}>
+    <html lang="es" className={`${dmSans.variable} ${alike.variable}`}>
       <body className="font-sans antialiased">
         {children}
         <Analytics />

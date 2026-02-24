@@ -4,42 +4,43 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Terra Costa - Luxury Coastal Palette */
-  --background: #F5F0E8;
-  --foreground: #4A3728;
+  /* Terra Costa — Brandbook Palette */
+  --background: #F7F3E3;
+  --foreground: #5C3D2E;
   --card: #FFFFFF;
-  --card-foreground: #4A3728;
+  --card-foreground: #5C3D2E;
   --popover: #FFFFFF;
-  --popover-foreground: #4A3728;
-  --primary: #4A3728;
-  --primary-foreground: #F5F0E8;
-  --secondary: #EDE8DD;
-  --secondary-foreground: #4A3728;
-  --muted: #EDE8DD;
-  --muted-foreground: #7A6A5A;
-  --accent: #8B4A4A;
+  --popover-foreground: #5C3D2E;
+  --primary: #5C3D2E;
+  --primary-foreground: #F7F3E3;
+  --secondary: #EDE8DB;
+  --secondary-foreground: #5C3D2E;
+  --muted: #EDE8DB;
+  --muted-foreground: #858C7A;
+  --accent: #A36658;
   --accent-foreground: #FFFFFF;
-  --destructive: #B44A4A;
+  --destructive: #A36658;
   --destructive-foreground: #FFFFFF;
-  --border: #D4CABC;
-  --input: #D4CABC;
-  --ring: #8B4A4A;
-  --chart-1: #8B4A4A;
-  --chart-2: #4A3728;
-  --chart-3: #C9A96E;
-  --chart-4: #7A6A5A;
-  --chart-5: #B8956A;
+  --border: #D6CDBF;
+  --input: #D6CDBF;
+  --ring: #A36658;
+  --chart-1: #A36658;
+  --chart-2: #CDA488;
+  --chart-3: #858C7A;
+  --chart-4: #5C3D2E;
+  --chart-5: #CDA488;
   --radius: 0.5rem;
-  --gold: #C9A96E;
-  --sand: #F5F0E8;
-  --terracotta: #8B4A4A;
-  --earth: #4A3728;
-  --cream: #FAF7F2;
+  --gold: #CDA488;
+  --sand: #F7F3E3;
+  --terracotta: #A36658;
+  --earth: #5C3D2E;
+  --cream: #F7F3E3;
+  --verde: #858C7A;
 }
 
 @theme inline {
   --font-sans: 'DM Sans', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-serif: 'Alike', serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -70,6 +71,7 @@
   --color-terracotta: var(--terracotta);
   --color-earth: var(--earth);
   --color-cream: var(--cream);
+  --color-verde: var(--verde);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
