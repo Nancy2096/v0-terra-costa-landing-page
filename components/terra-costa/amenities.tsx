@@ -42,7 +42,7 @@ const amenities = [
   },
   {
     icon: Car,
-    image: "/images/amenity-gym.jpg",
+    image: "/images/amenity-parking.jpg",
     name: "Estacionamiento Asignado",
     description:
       "Lugar exclusivo para cada residente. Acceso directo, seguro y cómodo a tu hogar.",
