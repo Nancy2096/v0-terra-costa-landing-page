@@ -35,7 +35,7 @@ const amenities = [
   },
   {
     icon: PawPrint,
-    image: "/images/amenity-pool.jpg",
+    image: "/images/amenity-petpark.jpg",
     name: "Pet Park",
     description:
       "Área segura y diseñada para tus mascotas. Porque ellos también merecen vivir frente al mar.",
