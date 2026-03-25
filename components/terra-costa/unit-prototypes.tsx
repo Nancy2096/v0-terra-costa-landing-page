@@ -25,10 +25,10 @@ const prototypes = [
     highlight: "Terraza con vista al mar",
     floorPlan: "/images/planta-2rec.jpg",
     gallery: [
-      "/images/render-interior.jpg",
-      "/images/unit-2r-kitchen.jpg",
-      "/images/render-bedroom.jpg",
-      "/images/render-terrace.jpg",
+      "/images/unit-2r-sala.jpg",
+      "/images/unit-2r-cocina.jpg",
+      "/images/unit-2r-recamara1.jpg",
+      "/images/unit-2r-recamara2.jpg",
     ],
   },
   {
