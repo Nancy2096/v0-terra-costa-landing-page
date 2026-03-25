@@ -57,10 +57,10 @@ const prototypes = [
     highlight: "Rooftop privado + Doble altura",
     floorPlan: "/images/planta-penthouse.jpg",
     gallery: [
-      "/images/unit-ph-rooftop.jpg",
-      "/images/rooftop-pool.jpg",
-      "/images/render-interior.jpg",
-      "/images/render-bedroom.jpg",
+      "/images/unit-ph-recamara1.jpg",
+      "/images/unit-ph-recamara2.jpg",
+      "/images/unit-ph-bano.jpg",
+      "/images/unit-ph-sala.jpg",
     ],
   },
 ]
