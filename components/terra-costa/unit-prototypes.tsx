@@ -9,8 +9,6 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
-  Maximize,
-  X,
 } from "lucide-react"
 
 /* ── Data ────────────────────────────────────────────────────────── */
@@ -132,7 +130,6 @@ function Carousel({
 /* ── Main Section ────────────────────────────────────────────────── */
 export function UnitPrototypes() {
   const [active, setActive] = useState(0)
-  const [showPlan, setShowPlan] = useState(false)
   const unit = prototypes[active]
 
   return (
@@ -176,33 +173,9 @@ export function UnitPrototypes() {
 
         {/* Content */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-          {/* Left: Gallery + Floor Plan toggle */}
-          <div className="lg:w-3/5 flex flex-col gap-4">
+          {/* Left: Gallery */}
+          <div className="lg:w-3/5">
             <Carousel images={unit.gallery} alt={unit.name} />
-
-            {/* Floor plan toggle */}
-            <button
-              onClick={() => setShowPlan(true)}
-              className="group flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:shadow-md hover:border-accent/30"
-            >
-              <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-lg bg-secondary">
-                <Image
-                  src={unit.floorPlan}
-                  alt={`Planta tipo ${unit.name}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex flex-col items-start gap-0.5">
-                <span className="text-sm font-medium text-earth">
-                  Planta tipo
-                </span>
-                <span className="text-xs text-muted-foreground">
-                  Ver distribución completa
-                </span>
-              </div>
-              <Maximize className="ml-auto h-4 w-4 text-muted-foreground group-hover:text-accent transition-colors" />
-            </button>
           </div>
 
           {/* Right: Specs Card */}
@@ -278,34 +251,7 @@ export function UnitPrototypes() {
         </div>
       </div>
 
-      {/* Floor Plan Lightbox */}
-      {showPlan && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-earth/90 backdrop-blur-sm p-4"
-          role="dialog"
-          aria-label="Planta tipo"
-        >
-          <button
-            onClick={() => setShowPlan(false)}
-            className="absolute top-5 right-5 flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20 transition-colors"
-            aria-label="Cerrar"
-          >
-            <X className="h-5 w-5" />
-          </button>
-          <div className="relative w-full max-w-3xl aspect-square rounded-xl overflow-hidden bg-card">
-            <Image
-              src={unit.floorPlan}
-              alt={`Planta tipo ${unit.name}`}
-              fill
-              className="object-contain p-4"
-              quality={90}
-            />
-          </div>
-          <p className="absolute bottom-8 text-primary-foreground/70 text-sm">
-            {unit.name} &mdash; {unit.size} m&sup2;
-          </p>
-        </div>
-      )}
+
     </section>
   )
 }
