@@ -41,10 +41,10 @@ const prototypes = [
     highlight: "Sala de TV + Terraza amplia",
     floorPlan: "/images/planta-3rec.jpg",
     gallery: [
-      "/images/unit-3r-living.jpg",
-      "/images/render-interior.jpg",
-      "/images/render-bedroom.jpg",
-      "/images/render-terrace.jpg",
+      "/images/unit-3r-recamara1.jpg",
+      "/images/unit-3r-recamara2.jpg",
+      "/images/unit-3r-recamara3.jpg",
+      "/images/unit-3r-terraza.jpg",
     ],
   },
   {
