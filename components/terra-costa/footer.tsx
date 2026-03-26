@@ -80,17 +80,10 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-cream/10 pt-8">
-          <p className="text-cream/40 text-xs">
-            &copy; {new Date().getFullYear()} Terra Costa — Desert Development.
-            Todos los derechos reservados.
+        <div className="mt-12 border-t border-cream/10 pt-8">
+          <p className="text-cream/40 text-xs text-center">
+            &copy; 2026 Terra Costa — Sitio desarrollado por Agency 4 Real Estate. Todos los derechos reservados.
           </p>
-          <a
-            href="#"
-            className="text-cream/40 text-xs hover:text-cream/60 transition-colors"
-          >
-            Aviso de privacidad
-          </a>
         </div>
       </div>
     </footer>
