@@ -42,9 +42,6 @@ export function Footer() {
               >
                 WhatsApp
               </a>
-              <a href="#contacto" className="hover:text-cream transition-colors">
-                Formulario de contacto
-              </a>
             </div>
           </div>
 
