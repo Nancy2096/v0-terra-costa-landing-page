@@ -60,7 +60,9 @@ export function Hero() {
             Agenda tu cita ahora
           </a>
           <a
-            href="#proyecto"
+            href="https://wa.me/526622216211?text=Hola%2C%20me%20interesa%20conocer%20la%20disponibilidad%20de%20Terra%20Costa"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-sm border border-cream/30 px-8 py-4 text-sm font-medium tracking-wider uppercase text-cream backdrop-blur-sm transition-colors hover:bg-cream/10"
           >
             Ver disponibilidad
