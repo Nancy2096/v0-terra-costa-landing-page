@@ -27,7 +27,7 @@ export function Location() {
           <div className="relative aspect-square lg:aspect-auto overflow-hidden rounded-lg">
             <iframe
               title="Ubicación Terra Costa en San Carlos, Sonora"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28076.42053767611!2d-111.07!3d27.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86b98a7a51e5c9d5%3A0x9aecf16a3b8f4b76!2sSan%20Carlos%2C%20Sonora%2C%20Mexico!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.5!2d-111.0547!3d27.9672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zUC7CuiBNYXIgQmVybWVqbyBTdXIsIDg1NTAzIFNhbiBDYXJsb3MsIFNvbi4!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx"
               className="absolute inset-0 h-full w-full border-0"
               allowFullScreen
               loading="lazy"
