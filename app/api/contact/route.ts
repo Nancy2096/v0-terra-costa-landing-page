@@ -40,7 +40,6 @@ export async function POST(req: Request) {
       html: html,
     })
 
-    // 2. Send brochure to user if requested
     if (type === "brochure") {
       await resend.emails.send({
         from: "Terra Costa <onboarding@resend.dev>",
