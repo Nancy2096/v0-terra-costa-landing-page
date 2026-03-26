@@ -58,7 +58,7 @@ export function ExitPopup() {
             precios y disponibilidad directamente en tu WhatsApp.
           </p>
           <a
-            href="https://wa.me/529629800511?text=Hola%2C%20quiero%20conocer%20los%20precios%20de%20preventa%20de%20Terra%20Costa"
+            href="https://wa.me/526622216211?text=Hola%2C%20quiero%20conocer%20los%20precios%20de%20preventa%20de%20Terra%20Costa"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleDismiss}
