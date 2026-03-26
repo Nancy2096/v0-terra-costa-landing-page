@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Instagram, Facebook, Youtube } from "lucide-react"
+import { Facebook } from "lucide-react"
 
 export function Footer() {
   return (
@@ -29,21 +29,18 @@ export function Footer() {
             </span>
             <div className="flex flex-col gap-2 text-cream/60 text-sm">
               <a
-                href="tel:+529629800511"
+                href="tel:+526622216211"
                 className="hover:text-cream transition-colors"
               >
-                +52 962 980 0511
+                +52 662 221 6211
               </a>
               <a
-                href="https://wa.me/529629800511"
+                href="https://wa.me/526622216211"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-cream transition-colors"
               >
                 WhatsApp
-              </a>
-              <a href="#contacto" className="hover:text-cream transition-colors">
-                Formulario de contacto
               </a>
             </div>
           </div>
@@ -55,42 +52,23 @@ export function Footer() {
             </span>
             <div className="flex gap-4">
               <a
-                href="#"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/60 transition-colors hover:border-gold hover:text-gold"
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
+                href="https://www.facebook.com/share/183t5a1Mqv/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/60 transition-colors hover:border-gold hover:text-gold"
               >
                 <Facebook className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                aria-label="YouTube"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/60 transition-colors hover:border-gold hover:text-gold"
-              >
-                <Youtube className="h-4 w-4" />
               </a>
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-cream/10 pt-8">
-          <p className="text-cream/40 text-xs">
-            &copy; {new Date().getFullYear()} Terra Costa — Desert Development.
-            Todos los derechos reservados.
+        <div className="mt-12 border-t border-cream/10 pt-8">
+          <p className="text-cream/40 text-xs text-center">
+            &copy; 2026 Terra Costa — Sitio desarrollado por Agency 4 Real Estate. Todos los derechos reservados.
           </p>
-          <a
-            href="#"
-            className="text-cream/40 text-xs hover:text-cream/60 transition-colors"
-          >
-            Aviso de privacidad
-          </a>
         </div>
       </div>
     </footer>
