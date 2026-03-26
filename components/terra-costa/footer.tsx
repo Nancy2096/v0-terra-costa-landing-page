@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Instagram, Facebook, Youtube } from "lucide-react"
+import { Facebook } from "lucide-react"
 
 export function Footer() {
   return (
@@ -55,25 +55,13 @@ export function Footer() {
             </span>
             <div className="flex gap-4">
               <a
-                href="#"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/60 transition-colors hover:border-gold hover:text-gold"
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
+                href="https://www.facebook.com/share/183t5a1Mqv/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/60 transition-colors hover:border-gold hover:text-gold"
               >
                 <Facebook className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                aria-label="YouTube"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/60 transition-colors hover:border-gold hover:text-gold"
-              >
-                <Youtube className="h-4 w-4" />
               </a>
             </div>
           </div>
