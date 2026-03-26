@@ -22,10 +22,33 @@ export function LeadForm() {
   const [submitted, setSubmitted] = useState(false)
   const [interest, setInterest] = useState("")
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    // In production, connect to CRM / webhook
-    setSubmitted(true)
+    const formData = new FormData(e.currentTarget)
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      interest: interest,
+      timeline: formData.get("timeline"),
+      type: "contact",
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+      } else {
+        alert("Hubo un error al enviar el formulario. Por favor intenta de nuevo.")
+      }
+    } catch (error) {
+      alert("Hubo un error de conexión. Por favor intenta de nuevo.")
+    }
   }
 
   if (submitted) {

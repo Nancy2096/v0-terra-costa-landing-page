@@ -26,11 +26,32 @@ export function BrochureDownload() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setStatus("sending")
-    // Simulate send — replace with real webhook / API
-    setTimeout(() => setStatus("sent"), 1500)
+
+    const data = {
+      ...form,
+      type: "brochure",
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+
+      if (response.ok) {
+        setStatus("sent")
+      } else {
+        setStatus("idle")
+        alert("Hubo un error al enviar la solicitud. Por favor intenta de nuevo.")
+      }
+    } catch (error) {
+      setStatus("idle")
+      alert("Hubo un error de conexión. Por favor intenta de nuevo.")
+    }
   }
 
   const inputCls =
@@ -40,16 +61,24 @@ export function BrochureDownload() {
     <section className="bg-secondary/60 py-12 lg:py-14">
       <div className="mx-auto max-w-6xl px-4">
         {status === "sent" ? (
-          <div className="flex flex-col items-center justify-center gap-3 py-6 text-center">
+          <div className="flex flex-col items-center justify-center gap-4 py-6 text-center">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10">
               <CheckCircle2 className="h-6 w-6 text-accent" strokeWidth={1.5} />
             </div>
             <h3 className="font-serif text-xl text-earth">
-              Brochure enviado a tu correo
+              ¡Gracias! Tu solicitud ha sido enviada
             </h3>
-            <p className="text-muted-foreground text-sm max-w-xs">
-              Revisa tu bandeja de entrada. Un asesor se pondra en contacto contigo pronto.
+            <p className="text-muted-foreground text-sm max-w-xs mb-2">
+              Haz clic abajo para descargar el brochure de Terra Costa. Un asesor se pondrá en contacto contigo pronto.
             </p>
+            <a
+              href="/brochure.pdf"
+              download
+              className="flex items-center gap-2 rounded-lg bg-earth px-8 py-3 text-xs font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-earth/90"
+            >
+              <FileDown className="h-4 w-4" />
+              Descargar Brochure PDF
+            </a>
           </div>
         ) : (
           <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-14">
