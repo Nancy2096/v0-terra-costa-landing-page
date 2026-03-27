@@ -35,7 +35,7 @@ export async function POST(req: Request) {
     // 1. Send lead notification to admin
     const adminEmail = await resend.emails.send({
       from: "Terra Costa <onboarding@resend.dev>",
-      to: ["nicolas.basconcello@agency4realestate.com"],
+      to: [process.env.EMAIL_ADDRESS || "gabyponceg20@gmail.com"],
       subject: subject,
       html: html,
     })
