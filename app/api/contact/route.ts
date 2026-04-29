@@ -32,17 +32,26 @@ export async function POST(req: Request) {
       `
     }
 
+    const adminEmails = process.env.EMAIL_ADDRESS
+      ? process.env.EMAIL_ADDRESS.split(',').map(e => e.trim())
+      : ["gabyponceg20@gmail.com"]
+
     // 1. Send lead notification to admin
     const adminEmail = await resend.emails.send({
-      from: "Terra Costa <onboarding@resend.dev>",
-      to: [process.env.EMAIL_ADDRESS || "gabyponceg20@gmail.com"],
+      from: "Terra Costa <contacto@terracostacondos.com>",
+      to: adminEmails,
       subject: subject,
       html: html,
     })
 
+    if (adminEmail.error) {
+      console.error("Error sending admin email:", adminEmail.error)
+      return NextResponse.json({ error: adminEmail.error }, { status: 400 })
+    }
+
     if (type === "brochure") {
-      await resend.emails.send({
-        from: "Terra Costa <onboarding@resend.dev>",
+      const brochureEmail = await resend.emails.send({
+        from: "Terra Costa <contacto@terracostacondos.com>",
         to: [email],
         subject: "Tu brochure de Terra Costa Condominios",
         html: `
@@ -54,14 +63,17 @@ export async function POST(req: Request) {
           <p>Saludos,<br/>El equipo de Terra Costa</p>
         `,
       })
-    }
-
-    if (adminEmail.error) {
-      return NextResponse.json({ error: adminEmail.error }, { status: 400 })
+      
+      if (brochureEmail.error) {
+        console.error("Error sending brochure email:", brochureEmail.error)
+        // You might decide whether to return error here or just log it
+        // return NextResponse.json({ error: brochureEmail.error }, { status: 400 })
+      }
     }
 
     return NextResponse.json({ data: adminEmail.data })
   } catch (error) {
+    console.error("Internal server error in API route:", error)
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 })
   }
 }

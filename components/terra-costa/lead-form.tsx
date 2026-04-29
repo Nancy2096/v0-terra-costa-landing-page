@@ -68,7 +68,7 @@ export function LeadForm() {
             </p>
             <div className="flex items-center gap-6 mt-4">
               <a
-                href="https://wa.me/526622216211"
+                href="https://wa.me/526624265008"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-accent hover:underline"
@@ -77,11 +77,11 @@ export function LeadForm() {
                 <span className="text-sm font-medium">WhatsApp directo</span>
               </a>
               <a
-                href="tel:+526622216211"
+                href="tel:+526624265008"
                 className="inline-flex items-center gap-2 text-accent hover:underline"
               >
                 <Phone className="h-5 w-5" />
-                <span className="text-sm font-medium">+52 662 221 6211</span>
+                <span className="text-sm font-medium">+52 1 662 426 5008</span>
               </a>
             </div>
           </div>
@@ -129,7 +129,7 @@ export function LeadForm() {
             {/* Contact Options */}
             <div className="mt-5 flex flex-col gap-4">
               <a
-                href="https://wa.me/526622216211"
+                href="https://wa.me/526624265008"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-4 rounded-lg border border-border bg-card p-5 transition-colors hover:border-accent/30"
@@ -142,12 +142,12 @@ export function LeadForm() {
                     WhatsApp
                   </span>
                   <span className="text-xs text-muted-foreground">
-                    +52 662 221 6211
+                    +52 1 662 426 5008
                   </span>
                 </div>
               </a>
               <a
-                href="tel:+526622216211"
+                href="tel:+526624265008"
                 className="inline-flex items-center gap-4 rounded-lg border border-border bg-card p-5 transition-colors hover:border-accent/30"
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10">
@@ -158,7 +158,7 @@ export function LeadForm() {
                     Llamar ahora
                   </span>
                   <span className="text-xs text-muted-foreground">
-                    +52 662 221 6211
+                    +52 1 662 426 5008
                   </span>
                 </div>
               </a>

@@ -8,7 +8,7 @@ const props = [
     title: "25% por debajo del mercado",
     description:
       "Precio de preventa estratégica en la zona más exclusiva de San Carlos. Asegura tu unidad hoy al mejor precio.",
-    image: "/images/value-preventa.jpg",
+    image: "/images/preventa.webp",
   },
   {
     icon: TrendingUp,
@@ -16,7 +16,7 @@ const props = [
     title: "Duplica tu inversión en 3 años",
     description:
       "Proyectos similares en la Golden Zone han demostrado plusvalía excepcional. Tu patrimonio crece mientras disfrutas.",
-    image: "/images/value-plusvalia.jpg",
+    image: "/images/plusvalía.webp",
   },
   {
     icon: MapPin,
@@ -24,7 +24,7 @@ const props = [
     title: "Golden Zone, San Carlos",
     description:
       "En el corazón de la zona más codiciada de San Carlos, frente al Mar de Cortés y rodeado de montañas.",
-    image: "/images/value-golden-zone.jpg",
+    image: "/images/ubicación.webp",
   },
 ]
 

@@ -29,13 +29,13 @@ export function Footer() {
             </span>
             <div className="flex flex-col gap-2 text-cream/60 text-sm">
               <a
-                href="tel:+526622216211"
+                href="tel:+526624265008"
                 className="hover:text-cream transition-colors"
               >
-                +52 662 221 6211
+                +52 1 662 426 5008
               </a>
               <a
-                href="https://wa.me/526622216211"
+                href="https://wa.me/526624265008"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-cream transition-colors"
