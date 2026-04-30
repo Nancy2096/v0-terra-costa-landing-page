@@ -14,13 +14,13 @@ import {
 /* ── Data ────────────────────────────────────────────────────────── */
 const prototypes = [
   {
-    id: "2rec",
-    name: "2 Recámaras",
-    tag: "Desde",
-    size: "95",
+    id: "tipo-1",
+    name: "Tipo 1",
+    tag: "Desde $5,096,000 MXN",
+    size: "91",
     beds: 2,
     baths: 2,
-    highlight: "Terraza con vista al mar",
+    highlight: "Vista al mar y pet park",
     floorPlan: "/images/planta-2rec.jpg",
     gallery: [
       "/images/unit-2r-sala.jpg",
@@ -30,13 +30,45 @@ const prototypes = [
     ],
   },
   {
-    id: "3rec",
-    name: "3 Recámaras",
-    tag: "Popular",
-    size: "130",
-    beds: 3,
-    baths: 2.5,
-    highlight: "Sala de TV + Terraza amplia",
+    id: "tipo-1b",
+    name: "Tipo 1B",
+    tag: "Desde $5,800,000 MXN",
+    size: "100",
+    beds: 2,
+    baths: 2,
+    highlight: "Terraza privada con vista al mar",
+    floorPlan: "/images/planta-2rec.jpg",
+    gallery: [
+      "/images/unit-2r-sala.jpg",
+      "/images/unit-2r-cocina.jpg",
+      "/images/unit-2r-recamara1.jpg",
+      "/images/unit-2r-recamara2.jpg",
+    ],
+  },
+  {
+    id: "tipo-2",
+    name: "Tipo 2",
+    tag: "Desde $5,220,000 MXN",
+    size: "87",
+    beds: 2,
+    baths: 2,
+    highlight: "Terraza con vista al mar",
+    floorPlan: "/images/planta-3rec.jpg",
+    gallery: [
+      "/images/unit-3r-recamara1.jpg",
+      "/images/unit-3r-recamara2.jpg",
+      "/images/unit-3r-recamara3.jpg",
+      "/images/unit-3r-terraza.jpg",
+    ],
+  },
+  {
+    id: "tipo-3",
+    name: "Tipo 3",
+    tag: "Desde $5,127,395 MXN",
+    size: "91",
+    beds: 2,
+    baths: 2,
+    highlight: "Acceso directo a pet park",
     floorPlan: "/images/planta-3rec.jpg",
     gallery: [
       "/images/unit-3r-recamara1.jpg",
@@ -48,11 +80,11 @@ const prototypes = [
   {
     id: "penthouse",
     name: "Penthouse",
-    tag: "Exclusivo",
-    size: "191",
+    tag: "Desde $10,320,000 MXN",
+    size: "172",
     beds: 3,
     baths: 3,
-    highlight: "Rooftop privado + Doble altura",
+    highlight: "Amplia área social + Gran terraza con vista al mar",
     floorPlan: "/images/planta-penthouse.jpg",
     gallery: [
       "/images/unit-ph-recamara1.jpg",
@@ -109,11 +141,10 @@ function Carousel({
           <button
             key={i}
             onClick={() => setIdx(i)}
-            className={`h-1.5 rounded-full transition-all ${
-              idx === i
-                ? "w-5 bg-primary-foreground"
-                : "w-1.5 bg-primary-foreground/40"
-            }`}
+            className={`h-1.5 rounded-full transition-all ${idx === i
+              ? "w-5 bg-primary-foreground"
+              : "w-1.5 bg-primary-foreground/40"
+              }`}
             aria-label={`Ver imagen ${i + 1}`}
           />
         ))}
@@ -156,11 +187,10 @@ export function UnitPrototypes() {
               <button
                 key={p.id}
                 onClick={() => setActive(i)}
-                className={`relative rounded-full px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all ${
-                  active === i
-                    ? "bg-earth text-primary-foreground shadow-md"
-                    : "text-muted-foreground hover:text-earth"
-                }`}
+                className={`relative rounded-full px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all ${active === i
+                  ? "bg-earth text-primary-foreground shadow-md"
+                  : "text-muted-foreground hover:text-earth"
+                  }`}
               >
                 {p.name}
                 {p.tag === "Popular" && active !== i && (
