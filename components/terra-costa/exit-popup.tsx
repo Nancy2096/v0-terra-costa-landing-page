@@ -54,7 +54,7 @@ export function ExitPopup() {
             ¿Ya viste los precios de preventa?
           </h3>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            Solo quedan 7 de 10 unidades. Recibe información exclusiva de
+            Solo quedan 5 de 10 unidades. Recibe información exclusiva de
             precios y disponibilidad directamente en tu WhatsApp.
           </p>
           <a
