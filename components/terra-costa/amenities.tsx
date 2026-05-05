@@ -21,10 +21,10 @@ const amenities = [
   },
   {
     icon: Wind,
-    image: "/images/amenity-yoga.jpg",
-    name: "Área de Yoga",
+    image: "/images/rooftop.webp",
+    name: "Rooftop",
     description:
-      "Tu espacio de bienestar frente al horizonte infinito. Meditación, estiramiento y calma absoluta.",
+      "Donde el cielo y el mar se encuentran. Relax, diseño y panorámicas únicas.",
   },
   {
     icon: Flame,
@@ -79,9 +79,8 @@ export function Amenities() {
                 src={item.image}
                 alt={item.name}
                 fill
-                className={`object-cover transition-opacity duration-700 ${
-                  active === i ? "opacity-100" : "opacity-0"
-                }`}
+                className={`object-cover transition-opacity duration-700 ${active === i ? "opacity-100" : "opacity-0"
+                  }`}
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 quality={80}
                 priority={i === 0}
@@ -108,38 +107,33 @@ export function Amenities() {
                 <button
                   key={item.name}
                   onClick={() => setActive(i)}
-                  className={`flex items-center gap-4 px-6 py-5 text-left transition-all duration-300 border-b border-cream/5 last:border-b-0 ${
-                    isActive
-                      ? "bg-cream/10 lg:border-l-2 lg:border-l-gold"
-                      : "hover:bg-cream/5"
-                  }`}
+                  className={`flex items-center gap-4 px-6 py-5 text-left transition-all duration-300 border-b border-cream/5 last:border-b-0 ${isActive
+                    ? "bg-cream/10 lg:border-l-2 lg:border-l-gold"
+                    : "hover:bg-cream/5"
+                    }`}
                 >
                   <div
-                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
-                      isActive ? "bg-gold/20 border border-gold/40" : "bg-cream/5 border border-cream/10"
-                    }`}
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${isActive ? "bg-gold/20 border border-gold/40" : "bg-cream/5 border border-cream/10"
+                      }`}
                   >
                     <item.icon
-                      className={`h-4 w-4 transition-colors duration-300 ${
-                        isActive ? "text-gold" : "text-cream/40"
-                      }`}
+                      className={`h-4 w-4 transition-colors duration-300 ${isActive ? "text-gold" : "text-cream/40"
+                        }`}
                       strokeWidth={1.5}
                     />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4
-                      className={`font-serif text-base transition-colors duration-300 ${
-                        isActive ? "text-cream" : "text-cream/60"
-                      }`}
+                      className={`font-serif text-base transition-colors duration-300 ${isActive ? "text-cream" : "text-cream/60"
+                        }`}
                     >
                       {item.name}
                     </h4>
                     <p
-                      className={`text-xs mt-0.5 leading-relaxed transition-all duration-300 overflow-hidden ${
-                        isActive
-                          ? "text-cream/50 max-h-20 opacity-100"
-                          : "max-h-0 opacity-0"
-                      }`}
+                      className={`text-xs mt-0.5 leading-relaxed transition-all duration-300 overflow-hidden ${isActive
+                        ? "text-cream/50 max-h-20 opacity-100"
+                        : "max-h-0 opacity-0"
+                        }`}
                     >
                       {item.description}
                     </p>

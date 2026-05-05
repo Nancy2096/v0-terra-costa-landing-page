@@ -111,17 +111,17 @@ export function LeadForm() {
             <div className="mt-10 flex items-center gap-4">
               <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-gold/40">
                 <Image
-                  src="/images/asesor.jpg"
-                  alt="Carlos Mendoza, asesor inmobiliario"
+                  src="/images/img gaby.webp"
+                  alt="Gabrielle Ponce, Directora Comercial"
                   fill
                   className="object-cover"
                   sizes="56px"
                 />
               </div>
               <div>
-                <p className="text-sm font-medium text-earth">Carlos Mendoza</p>
+                <p className="text-sm font-medium text-earth">Gabrielle Ponce</p>
                 <p className="text-xs text-muted-foreground">
-                  Asesor Inmobiliario — Terra Costa
+                  Directora Comercial — Terra Costa
                 </p>
               </div>
             </div>
@@ -235,11 +235,10 @@ export function LeadForm() {
                   {interests.map((opt) => (
                     <label
                       key={opt}
-                      className={`flex cursor-pointer items-center justify-center rounded-sm border px-4 py-3 text-sm transition-colors ${
-                        interest === opt
-                          ? "border-accent bg-accent/10 text-accent font-medium"
-                          : "border-input text-muted-foreground hover:border-accent/30"
-                      }`}
+                      className={`flex cursor-pointer items-center justify-center rounded-sm border px-4 py-3 text-sm transition-colors ${interest === opt
+                        ? "border-accent bg-accent/10 text-accent font-medium"
+                        : "border-input text-muted-foreground hover:border-accent/30"
+                        }`}
                     >
                       <input
                         type="radio"

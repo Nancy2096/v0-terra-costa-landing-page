@@ -23,10 +23,10 @@ const prototypes = [
     highlight: "Vista al mar y pet park",
     floorPlan: "/images/planta-2rec.jpg",
     gallery: [
-      "/images/unit-2r-sala.jpg",
-      "/images/unit-2r-cocina.jpg",
-      "/images/unit-2r-recamara1.jpg",
-      "/images/unit-2r-recamara2.jpg",
+      "/images/tipo 1_1.webp",
+      "/images/tipo 1_2.webp",
+      "/images/tipo 1_3.webp",
+      "/images/tipo 1_4.webp",
     ],
   },
   {
@@ -39,10 +39,10 @@ const prototypes = [
     highlight: "Terraza privada con vista al mar",
     floorPlan: "/images/planta-2rec.jpg",
     gallery: [
-      "/images/unit-2r-sala.jpg",
-      "/images/unit-2r-cocina.jpg",
-      "/images/unit-2r-recamara1.jpg",
-      "/images/unit-2r-recamara2.jpg",
+      "/images/tipo 1B_1.webp",
+      "/images/tipo 1B_2.webp",
+      "/images/tipo 1B_3.webp",
+      "/images/tipo 1B_4.webp",
     ],
   },
   {
@@ -55,10 +55,10 @@ const prototypes = [
     highlight: "Terraza con vista al mar",
     floorPlan: "/images/planta-3rec.jpg",
     gallery: [
-      "/images/unit-3r-recamara1.jpg",
-      "/images/unit-3r-recamara2.jpg",
-      "/images/unit-3r-recamara3.jpg",
-      "/images/unit-3r-terraza.jpg",
+      "/images/tipo 2_1.webp",
+      "/images/tipo 2_2.webp",
+      "/images/tipo 2_3.webp",
+      "/images/tipo 2_4.webp",
     ],
   },
   {
@@ -71,10 +71,10 @@ const prototypes = [
     highlight: "Acceso directo a pet park",
     floorPlan: "/images/planta-3rec.jpg",
     gallery: [
-      "/images/unit-3r-recamara1.jpg",
-      "/images/unit-3r-recamara2.jpg",
-      "/images/unit-3r-recamara3.jpg",
-      "/images/unit-3r-terraza.jpg",
+      "/images/tipo 3_1.webp",
+      "/images/tipo 3_2.webp",
+      "/images/tipo 3_3.webp",
+      "/images/tipo 3_4.webp",
     ],
   },
   {
@@ -87,10 +87,10 @@ const prototypes = [
     highlight: "Amplia área social + Gran terraza con vista al mar",
     floorPlan: "/images/planta-penthouse.jpg",
     gallery: [
-      "/images/unit-ph-recamara1.jpg",
-      "/images/unit-ph-recamara2.jpg",
-      "/images/unit-ph-bano.jpg",
-      "/images/unit-ph-sala.jpg",
+      "/images/penthouse_1.webp",
+      "/images/penthouse_2.webp",
+      "/images/penthouse_3.webp",
+      "/images/penthouse_4.webp",
     ],
   },
 ]
