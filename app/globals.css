@@ -89,3 +89,19 @@
     scroll-behavior: smooth;
   }
 }
+
+/* Blog Content Styles */
+.blog-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: var(--earth);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: var(--foreground);
+  opacity: 0.9;
+}

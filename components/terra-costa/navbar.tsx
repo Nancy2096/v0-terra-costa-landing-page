@@ -5,10 +5,11 @@ import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 const links = [
-  { label: "Proyecto", href: "#proyecto" },
-  { label: "Modelos", href: "#prototipos" },
-  { label: "Ubicación", href: "#ubicacion" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Proyecto", href: "/#proyecto" },
+  { label: "Modelos", href: "/#prototipos" },
+  { label: "Ubicación", href: "/#ubicacion" },
+  { label: "Blog", href: "/#blog" },
+  { label: "Contacto", href: "/#contacto" },
 ]
 
 export function Navbar() {
@@ -55,7 +56,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#contacto"
+            href="/#contacto"
             className="rounded-sm bg-accent px-5 py-2.5 text-xs font-medium tracking-wider uppercase text-accent-foreground transition-colors hover:bg-accent/90"
           >
             Agenda tu cita
