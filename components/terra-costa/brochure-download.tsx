@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { FileDown, Loader2, CheckCircle2 } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 const budgetOptions = [
   "Menos de $3M MXN",
@@ -12,6 +13,7 @@ const budgetOptions = [
 ]
 
 export function BrochureDownload() {
+  const router = useRouter()
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -43,7 +45,7 @@ export function BrochureDownload() {
       })
 
       if (response.ok) {
-        setStatus("sent")
+        router.push("/gracias?type=brochure")
       } else {
         setStatus("idle")
         alert("Hubo un error al enviar la solicitud. Por favor intenta de nuevo.")
@@ -60,27 +62,7 @@ export function BrochureDownload() {
   return (
     <section className="bg-secondary/60 py-12 lg:py-14">
       <div className="mx-auto max-w-6xl px-4">
-        {status === "sent" ? (
-          <div className="flex flex-col items-center justify-center gap-4 py-6 text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10">
-              <CheckCircle2 className="h-6 w-6 text-accent" strokeWidth={1.5} />
-            </div>
-            <h3 className="font-serif text-xl text-earth">
-              ¡Gracias! Tu solicitud ha sido enviada
-            </h3>
-            <p className="text-muted-foreground text-sm max-w-xs mb-2">
-              Haz clic abajo para descargar el brochure de Terra Costa. Un asesor se pondrá en contacto contigo pronto.
-            </p>
-            <a
-              href="/brochure.pdf"
-              download
-              className="flex items-center gap-2 rounded-lg bg-earth px-8 py-3 text-xs font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-earth/90"
-            >
-              <FileDown className="h-4 w-4" />
-              Descargar Brochure PDF
-            </a>
-          </div>
-        ) : (
+
           <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-14">
             {/* ── Left: Copy ────────────────────────────────────── */}
             <div className="lg:w-2/5 flex flex-col gap-3">
@@ -180,7 +162,6 @@ export function BrochureDownload() {
               </div>
             </form>
           </div>
-        )}
       </div>
     </section>
   )

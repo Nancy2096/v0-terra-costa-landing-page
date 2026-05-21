@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Facebook } from "lucide-react"
+import { Facebook, Instagram } from "lucide-react"
 
 export function Footer() {
   return (
@@ -59,6 +59,15 @@ export function Footer() {
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/60 transition-colors hover:border-gold hover:text-gold"
               >
                 <Facebook className="h-4 w-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/terracosta_sc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/60 transition-colors hover:border-gold hover:text-gold"
+              >
+                <Instagram className="h-4 w-4" />
               </a>
             </div>
           </div>

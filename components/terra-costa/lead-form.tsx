@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Phone, MessageCircle, CheckCircle } from "lucide-react"
+import { useRouter } from "next/navigation"
+import { Phone, MessageCircle } from "lucide-react"
 
 const interests = [
   "Vivir ahí",
@@ -19,7 +20,7 @@ const timelines = [
 ]
 
 export function LeadForm() {
-  const [submitted, setSubmitted] = useState(false)
+  const router = useRouter()
   const [interest, setInterest] = useState("")
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -42,7 +43,7 @@ export function LeadForm() {
       })
 
       if (response.ok) {
-        setSubmitted(true)
+        router.push("/gracias")
       } else {
         alert("Hubo un error al enviar el formulario. Por favor intenta de nuevo.")
       }
@@ -51,44 +52,7 @@ export function LeadForm() {
     }
   }
 
-  if (submitted) {
-    return (
-      <section id="contacto" className="bg-cream py-20 lg:py-28">
-        <div className="mx-auto max-w-2xl px-4 text-center">
-          <div className="flex flex-col items-center gap-6">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
-              <CheckCircle className="h-8 w-8 text-accent" />
-            </div>
-            <h2 className="font-serif text-3xl text-earth">
-              Gracias por tu interés
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Nuestro equipo te contactará en menos de 24 horas para agendar tu
-              cita y compartirte precios y disponibilidad actualizados.
-            </p>
-            <div className="flex items-center gap-6 mt-4">
-              <a
-                href="https://wa.me/526624265008"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-accent hover:underline"
-              >
-                <MessageCircle className="h-5 w-5" />
-                <span className="text-sm font-medium">WhatsApp directo</span>
-              </a>
-              <a
-                href="tel:+526624265008"
-                className="inline-flex items-center gap-2 text-accent hover:underline"
-              >
-                <Phone className="h-5 w-5" />
-                <span className="text-sm font-medium">+52 1 662 426 5008</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    )
-  }
+
 
   return (
     <section id="contacto" className="bg-cream py-20 lg:py-28">
